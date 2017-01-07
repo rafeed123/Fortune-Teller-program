@@ -29,7 +29,29 @@ namespace Fortune_Teller_Program
 
             Console.WriteLine("So you were born in the monnth of " + birthMonth + " very nice");
 
-            Console.WriteLine("Now can you tell me you favorite ROYGBIV color");
+            string clrSpectrum = "Red, Orang, Yellow, Green, Blue, Indigo, Violet";
+
+            Console.WriteLine("Now can you tell me you favorite ROYGBIV color ");
+            Console.WriteLine("If you dont know what colors are in ROYGBIV enter help");
+
+            string help = Console.ReadLine();
+
+            Console.WriteLine(clrSpectrum);
+
+
+
+            string favColor = Console.ReadLine();
+            Console.WriteLine("your favorite coloer is " + favColor + "Now how many siblings do you have");
+
+            int siblings = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("So you have " + siblings + ", Thanks for answering my questions");
+
+
+            Console.WriteLine("Are You ready for your fortune");
+
+
+
 
 
 

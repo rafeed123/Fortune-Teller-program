@@ -19,36 +19,122 @@ namespace Fortune_Teller_Program
 
             string lastName = Console.ReadLine();
 
-            Console.WriteLine("Now " + name + " " + lastName + " can you tell me how old you are");
+            Console.WriteLine("Now please enter your age ");
 
             int age = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Now that I know your age tell me what month you were born using a # ");
+            Console.WriteLine("Now that I know your age tell me what month you were born using a number ");
 
             int birthMonth = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("So you were born in the monnth of " + birthMonth + " very nice");
+            
 
-            string clrSpectrum = "Red, Orang, Yellow, Green, Blue, Indigo, Violet";
+            
 
-            Console.WriteLine("Now can you tell me you favorite ROYGBIV color ");
-            Console.WriteLine("If you dont know what colors are in ROYGBIV enter help");
+            string clrSpectrum = "Red, Orange, Yellow, Green, Blue, Indigo, Violet";
 
-            string help = Console.ReadLine();
+            Console.WriteLine("Now can you tell me you favorite ROYGBIV color, If you dont know what colors are in ROYGBIV enter help ");
 
-            Console.WriteLine(clrSpectrum);
+            string yourClr = Console.ReadLine();
 
+            if (yourClr == "help")
+            {
+                Console.WriteLine(clrSpectrum);
+                yourClr = Console.ReadLine();
+            }
 
-
-            string favColor = Console.ReadLine();
-            Console.WriteLine("your favorite coloer is " + favColor + "Now how many siblings do you have");
+            Console.WriteLine(" Now enter how many siblings you have");
 
             int siblings = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("So you have " + siblings + ", Thanks for answering my questions");
+            
+            Console.WriteLine(name + " " + lastName);
+            
 
 
-            Console.WriteLine("Are You ready for your fortune");
+
+          
+
+
+            if (age % 2 == 0)
+            {
+                Console.WriteLine("You will retire in 10 years");
+            }
+            else
+            {
+                Console.WriteLine("You will retire in 15 years");
+            }
+
+
+
+
+
+            if (siblings == 0)
+            {
+                Console.WriteLine("You will retire with a vacation home  in paris");
+            }
+            if (siblings == 1)
+            {
+                Console.WriteLine("You will retire with a vacation home in the Bahamas");
+            }
+            if (siblings == 2)
+            {
+                Console.WriteLine("You will retire with a vacation home in Belize");
+            }
+            if (siblings == 3)
+            {
+                Console.WriteLine("You will retire with a vacation home in Costa Rica");
+            }
+            if (siblings > 3)
+            {
+                Console.WriteLine("You will retire with a vacation home in Florida.");
+            }
+            else if (siblings < 0)
+            {
+                Console.WriteLine("You will retire in Prison Sucka!");
+            }
+
+
+            //if (yourClr == "help")
+            //{
+            //    Console.WriteLine(clrSpectrum);
+            //    yourClr = Console.ReadLine();
+            //}
+
+            switch (yourClr)
+            {
+                case "red":
+                    Console.WriteLine("You will retire with a jet plane");
+                    break;
+                case "orange":
+                    Console.WriteLine("You will retire with a boat");
+                    break;
+                case "yellow":
+                    Console.WriteLine("You will retire with a Benz");
+                    break;
+                case "green":
+                    Console.WriteLine("you will retire with a BMW");
+                    break;
+                case "blue":
+                    Console.WriteLine("you will retire with a Hummer");
+                    break;
+                case "indigo":
+                    Console.WriteLine("You will retire with a Jeep");
+                    break;
+                case "violet":
+                    Console.WriteLine("You will retire with a  Ford fiesta");
+                    break;
+            }
+
+
+            
+
+
+
+
+
+
+
 
 
 

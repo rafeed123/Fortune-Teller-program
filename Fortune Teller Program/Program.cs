@@ -15,18 +15,46 @@ namespace Fortune_Teller_Program
 
             string name = Console.ReadLine();
 
-            Console.WriteLine(" Thank you " + name + "." + " Now please enter your last name");
+            Console.WriteLine("Thank you " + name + "." + " Now please enter your last name");
 
             string lastName = Console.ReadLine();
+
+
 
             Console.WriteLine("Now please enter your age ");
 
             int age = int.Parse(Console.ReadLine());
+            string ageResult = "";
+            if (age % 2 == 0)
+            {
+                ageResult = "10 years";
+            }
+            else
+            {
+                ageResult = "20 years";
+            }
 
             Console.WriteLine("Now that I know your age tell me what month you were born using a number ");
 
             int birthMonth = int.Parse(Console.ReadLine());
+            int money;
 
+            if (birthMonth == 1 - 4)
+            {
+                money = 25;
+            }
+            if (birthMonth == 5 - 8)
+            {
+                money = 50;
+            }
+            if (birthMonth == 9 - 12)
+            {
+                money = 100;
+            }
+            else
+            {
+                money = 10;
+            }
 
 
 
@@ -37,76 +65,16 @@ namespace Fortune_Teller_Program
 
             string yourClr = Console.ReadLine();
 
+
+            string vehicle = "";
+
+
+
+
             if (yourClr == "help")
             {
                 Console.WriteLine(clrSpectrum);
                 yourClr = Console.ReadLine();
-            }
-
-            Console.WriteLine(" Now enter how many siblings you have");
-
-            int siblings = int.Parse(Console.ReadLine());
-
-
-            Console.WriteLine(name + " " + lastName);
-
-
-
-
-
-
-
-            if (age % 2 == 0)
-            {
-                Console.WriteLine("You will retire in 10 years");
-            }
-            else
-            {
-                Console.WriteLine("You will retire in 15 years");
-            }
-
-
-            if (birthMonth == 1 - 4)
-            {
-                Console.WriteLine("You will retire with $25k ");
-            }
-            if (birthMonth == 5 - 8)
-            {
-                Console.WriteLine("You will retire with $50k ");
-            }
-            if (birthMonth == 9 - 12)
-            {
-                Console.WriteLine("You will retire with $100k ");
-            }
-            else
-            {
-                Console.WriteLine("You will retire with $0 in the bank");
-            }
-
-
-            if (siblings == 0)
-            {
-                Console.WriteLine("You will retire with a vacation home  in paris");
-            }
-            if (siblings == 1)
-            {
-                Console.WriteLine("You will retire with a vacation home in the Bahamas");
-            }
-            if (siblings == 2)
-            {
-                Console.WriteLine("You will retire with a vacation home in Belize");
-            }
-            if (siblings == 3)
-            {
-                Console.WriteLine("You will retire with a vacation home in Costa Rica");
-            }
-            if (siblings > 3)
-            {
-                Console.WriteLine("You will retire with a vacation home in Florida.");
-            }
-            else if (siblings < 0)
-            {
-                Console.WriteLine("You will retire in Prison Sucka!");
             }
 
 
@@ -114,27 +82,74 @@ namespace Fortune_Teller_Program
             switch (yourClr)
             {
                 case "red":
-                    Console.WriteLine("You will retire with a jet plane");
+                    vehicle = ("red Ferrari");
                     break;
                 case "orange":
-                    Console.WriteLine("You will retire with a boat");
+                    vehicle = (" Audi");
                     break;
                 case "yellow":
-                    Console.WriteLine("You will retire with a Benz");
+                    vehicle = ("Benz");
                     break;
                 case "green":
-                    Console.WriteLine("you will retire with a BMW");
+                    vehicle = ("BMW");
                     break;
                 case "blue":
-                    Console.WriteLine("you will retire with a Hummer");
+                    vehicle = ("Hummer");
                     break;
                 case "indigo":
-                    Console.WriteLine("You will retire with a Jeep");
+                    vehicle = ("Jeep");
                     break;
                 case "violet":
-                    Console.WriteLine("You will retire with a  Ford fiesta");
+                    vehicle = ("Ford fiesta");
                     break;
             }
+
+
+            Console.WriteLine("How many siblings you have");
+
+            int siblings = int.Parse(Console.ReadLine());
+
+
+            string vacHome = "";
+
+
+            if (siblings == 0)
+            {
+                vacHome = ("Paris");
+            }
+            if (siblings == 1)
+            {
+                vacHome = ("Bahamas");
+            }
+            if (siblings == 2)
+            {
+                vacHome = ("Belize");
+            }
+            if (siblings == 3)
+            {
+                vacHome = ("Costa Rica");
+            }
+            if (siblings > 3)
+            {
+                vacHome = ("Florida");
+            }
+            else if (siblings < 0)
+            {
+                vacHome = ("Prison");
+            }
+
+
+
+            Console.WriteLine(name + " " + lastName + " you will retire in " + ageResult + " with $" + money + "K" + " in the bank " + " you will have a vacation home in " + vacHome + " and drive a " + vehicle);
+
+
+
+
+
+
+
+
+
 
 
 

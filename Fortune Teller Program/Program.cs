@@ -27,9 +27,9 @@ namespace Fortune_Teller_Program
 
             int birthMonth = int.Parse(Console.ReadLine());
 
-            
 
-            
+
+
 
             string clrSpectrum = "Red, Orange, Yellow, Green, Blue, Indigo, Violet";
 
@@ -47,13 +47,13 @@ namespace Fortune_Teller_Program
 
             int siblings = int.Parse(Console.ReadLine());
 
-            
+
             Console.WriteLine(name + " " + lastName);
-            
 
 
 
-          
+
+
 
 
             if (age % 2 == 0)
@@ -66,7 +66,22 @@ namespace Fortune_Teller_Program
             }
 
 
-
+            if (birthMonth == 1 - 4)
+            {
+                Console.WriteLine("You will retire with $25k ");
+            }
+            if (birthMonth == 5 - 8)
+            {
+                Console.WriteLine("You will retire with $50k ");
+            }
+            if (birthMonth == 9 - 12)
+            {
+                Console.WriteLine("You will retire with $100k ");
+            }
+            else
+            {
+                Console.WriteLine("You will retire with $0 in the bank");
+            }
 
 
             if (siblings == 0)
@@ -95,11 +110,6 @@ namespace Fortune_Teller_Program
             }
 
 
-            //if (yourClr == "help")
-            //{
-            //    Console.WriteLine(clrSpectrum);
-            //    yourClr = Console.ReadLine();
-            //}
 
             switch (yourClr)
             {
@@ -127,7 +137,12 @@ namespace Fortune_Teller_Program
             }
 
 
-            
+
+
+
+
+
+
 
 
 

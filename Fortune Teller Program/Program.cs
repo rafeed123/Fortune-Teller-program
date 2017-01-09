@@ -59,11 +59,11 @@ namespace Fortune_Teller_Program
 
 
 
-            string clrSpectrum = "Red, Orange, Yellow, Green, Blue, Indigo, Violet";
 
             Console.WriteLine("Now can you tell me you favorite ROYGBIV color, If you dont know what colors are in ROYGBIV enter help ");
 
             string yourClr = Console.ReadLine();
+            yourClr = yourClr.ToLower();
 
 
             string vehicle = "";
@@ -73,13 +73,13 @@ namespace Fortune_Teller_Program
 
             if (yourClr == "help")
             {
-                Console.WriteLine(clrSpectrum);
+                Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet");
                 yourClr = Console.ReadLine();
             }
 
 
 
-            switch (yourClr)
+            switch (yourClr.ToLower())
             {
                 case "red":
                     vehicle = ("red Ferrari");
